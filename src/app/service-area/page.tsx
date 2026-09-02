@@ -16,7 +16,7 @@ export default function ServiceAreaPage() {
       <PageHero
         eyebrow="Service area"
         title="Treasure Valley wells, Ada and Canyon County"
-        lede="Whole-home filtration for homes on private wells across the Treasure Valley. Based in Meridian, Idaho."
+        lede="Whole-home filtration and point-source RO for drinking water, for homes on private wells across the Treasure Valley. Based in Meridian, Idaho."
       />
 
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-2">
@@ -30,7 +30,8 @@ export default function ServiceAreaPage() {
           </ul>
           <p className="mt-6 leading-relaxed text-muted">
             If you are on a well in this area and notice stain, smell,
-            hardness, or sediment, request a free water test.
+            hardness, or sediment — or want drinking-water RO — request a
+            free water test.
           </p>
         </div>
 

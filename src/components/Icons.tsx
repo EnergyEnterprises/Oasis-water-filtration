@@ -100,6 +100,31 @@ export function IconUv({ className }: IconProps) {
   );
 }
 
+export function IconRo({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} fill="none" aria-hidden>
+      <path
+        d="M14 10h12v20H14z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M18 14v12M22 16v8"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <path
+        d="M10 22c2 2 4 3 10 3s8-1 10-3"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export const treatmentIcons = {
   sediment: IconSediment,
   hardness: IconHardness,

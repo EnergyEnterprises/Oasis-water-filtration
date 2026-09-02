@@ -7,7 +7,7 @@ import { processSteps, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Process: test, quote, install, service",
   description:
-    "How Oasis Water Filtration works: free water test, a whole-home treatment quote, install, and service for Treasure Valley private wells.",
+    "How Oasis Water Filtration works: free water test, a quote for whole-home treatment and/or point-source RO, install, and service for Treasure Valley private wells.",
   alternates: { canonical: "/process" },
 };
 
@@ -17,7 +17,7 @@ export default function ProcessPage() {
       <PageHero
         eyebrow="Process"
         title="Test, quote, install, then service"
-        lede="A free water test comes first. The quote follows what is in the well. Install is whole-home. Service keeps the system working."
+        lede="A free water test comes first. The quote follows what is in the well. Install can be whole-home treatment, a point-source RO drinking-water system, or both. Service keeps the system working."
       />
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">

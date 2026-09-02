@@ -16,7 +16,7 @@ export function JsonLd() {
     },
     areaServed: ["Treasure Valley", "Ada County", "Canyon County", "Meridian"],
     description:
-      "Whole-home water filtration and treatment for homes on private wells in Ada and Canyon County, Idaho.",
+      "Whole-home water filtration and treatment, plus point-source reverse osmosis for drinking water, for homes on private wells in Ada and Canyon County, Idaho.",
     parentOrganization: {
       "@type": "Organization",
       name: site.parent,

@@ -44,5 +44,5 @@ It does not include login, a CMS, reviews, ratings, licenses, years in business,
 - Address: 3937 East Ustick Road, Meridian, Idaho
 - Phone: 208-573-0859
 - Related: Oasis Well Pump, a division of Energy Enterprises LLC
-- Offer: whole-home water filtration and treatment; free water tests and quotes
+- Offer: whole-home water filtration and treatment, plus point-source reverse osmosis for drinking water; free water tests and quotes
 - Area: Treasure Valley / Ada and Canyon County, Idaho, homes on private wells

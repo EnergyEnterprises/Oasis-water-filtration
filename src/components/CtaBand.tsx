@@ -8,7 +8,7 @@ type CtaBandProps = {
 
 export function CtaBand({
   title = "Request a free water test and quote",
-  body = "Tell us what you notice at the tap. We will test the well and quote whole-home treatment for your Treasure Valley home.",
+  body = "Tell us what you notice at the tap. We will test the well and quote whole-home treatment, point-source RO for drinking water, or both.",
 }: CtaBandProps) {
   return (
     <section className="bg-sand">

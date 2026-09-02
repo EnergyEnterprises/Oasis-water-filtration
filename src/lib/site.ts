@@ -27,6 +27,15 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+export const roOffer = {
+  slug: "reverse-osmosis",
+  title: "Point-source reverse osmosis",
+  summary:
+    "A point-of-use reverse osmosis system for drinking and cooking water, typically under the sink with a dedicated faucet.",
+  detail:
+    "Point-source RO is a point-of-use system: it polishes water at one tap for drinking and cooking, usually installed under the sink with a dedicated drinking-water faucet. It sits alongside whole-home treatment for the rest of the house. It does not replace whole-home sediment, softening, iron, sulfur, or UV.",
+} as const;
+
 export const treatments = [
   {
     slug: "sediment",
@@ -88,22 +97,22 @@ export const processSteps = [
   {
     n: "01",
     title: "Test",
-    body: "Request a free water test. Tell us what you notice—stain, smell, hardness, or sediment—and we test the well so the recommendation matches the water, not a catalog default.",
+    body: "Request a free water test. Tell us what you notice—stain, smell, hardness, sediment, or water you do not want to drink—and we test the well so the recommendation matches the water, not a catalog default.",
   },
   {
     n: "02",
     title: "Quote",
-    body: "You get a whole-home filtration and treatment quote based on the test and your home. We explain what each stage is for: sediment, softening, iron, sulfur, taste and odor, and UV when it belongs in the package.",
+    body: "You get a quote based on the test and your home: whole-home filtration and treatment, a point-source RO system for drinking water, or both. We explain what each whole-home stage is for, and when RO at a dedicated faucet belongs with the package.",
   },
   {
     n: "03",
     title: "Install",
-    body: "Equipment is installed for the whole house, typically near the pressure tank or where well water enters. The goal is treated water at every tap, not a pitcher on the counter.",
+    body: "Whole-home equipment is installed near the pressure tank or where well water enters, so treated water reaches every tap. A point-source RO system, when you want one, is installed at a drinking-water faucet — typically under the sink.",
   },
   {
     n: "04",
     title: "Service",
-    body: "Filters, media, and UV lamps need periodic care. Call when the water changes or it is time for service so the system keeps doing the job it was sized for.",
+    body: "Filters, media, UV lamps, and RO stages need periodic care. Call when the water changes or it is time for service so the system keeps doing the job it was sized for.",
   },
 ] as const;
 
@@ -112,7 +121,14 @@ export const noticeOptions = [
   { id: "smell", label: "Smell" },
   { id: "hardness", label: "Hardness" },
   { id: "sediment", label: "Sediment" },
+  { id: "drinking", label: "Drinking water / RO" },
+] as const;
+
+export const interestOptions = [
+  { id: "whole-home", label: "Whole-home treatment" },
+  { id: "ro", label: "Point-source RO (drinking water)" },
+  { id: "both", label: "Both" },
 ] as const;
 
 export const defaultDescription =
-  "Whole-home water filtration and treatment for Treasure Valley homes on private wells. Sediment, hardness, iron, sulfur, taste and odor, and UV. Free water test and quote in Ada and Canyon County, Idaho.";
+  "Whole-home water filtration and treatment, plus point-source reverse osmosis for drinking water, for Treasure Valley homes on private wells. Free water test and quote in Ada and Canyon County, Idaho.";

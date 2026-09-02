@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact and request a quote",
   description:
-    "Request a free water test and whole-home filtration quote. Oasis Water Filtration, 3937 East Ustick Road, Meridian, Idaho. Call 208-573-0859.",
+    "Request a free water test and quote for whole-home treatment or point-source RO drinking water. Oasis Water Filtration, 3937 East Ustick Road, Meridian, Idaho. Call 208-573-0859.",
   alternates: { canonical: "/contact" },
 };
 
@@ -54,8 +54,8 @@ export default function ContactPage() {
             <h2 className="font-display text-2xl text-deep">What to mention</h2>
             <p className="mt-3 leading-relaxed text-muted">
               Well or city water, your city, and whether you notice stain,
-              smell, hardness, or sediment. That is enough to start a test
-              and quote.
+              smell, hardness, or sediment — or want point-source RO for
+              drinking water. That is enough to start a test and quote.
             </p>
           </div>
         </aside>

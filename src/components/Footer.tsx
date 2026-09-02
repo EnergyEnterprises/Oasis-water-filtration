@@ -9,7 +9,8 @@ export function Footer() {
         <div>
           <Logo invert />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-sand/75">
-            Whole-home water filtration and treatment for {site.areaLong},{" "}
+            Whole-home water filtration and treatment, plus point-source
+            reverse osmosis for drinking water, for {site.areaLong},{" "}
             {site.audience}.
           </p>
         </div>
