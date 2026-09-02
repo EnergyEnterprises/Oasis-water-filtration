@@ -49,10 +49,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a className="btn btn-primary hidden sm:inline-flex" href={site.phoneHref}>
+          <a className="btn btn-primary px-4 lg:hidden" href={site.phoneHref}>
+            Call
+          </a>
+          <a className="btn btn-primary hidden lg:inline-flex" href={site.phoneHref}>
             {site.phoneDisplay}
           </a>
-          <Link className="btn btn-outline hidden md:inline-flex" href="/contact">
+          <Link className="btn btn-outline hidden lg:inline-flex" href="/contact">
             Request a quote
           </Link>
           <button
