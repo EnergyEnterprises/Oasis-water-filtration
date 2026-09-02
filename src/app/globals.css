@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-deep: #0a2f36;
+  --color-deep-2: #0e3d45;
+  --color-teal: #155e63;
+  --color-aqua: #2a8a86;
+  --color-foam: #e8f3f1;
+  --color-sand: #f3ede3;
+  --color-cream: #faf7f2;
+  --color-ink: #1a2224;
+  --color-muted: #5a686a;
+  --color-clay: #b8956a;
+  --color-line: #d4cdc0;
+  --color-paper: #fffdf9;
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-source-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-aqua) 35%, white);
+  color: var(--color-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-aqua);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--color-paper);
+  padding: 0.5rem 1rem;
+  color: var(--color-deep);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition:
+      background 160ms ease,
+      color 160ms ease,
+      border-color 160ms ease,
+      transform 160ms ease;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn-primary {
+    background: var(--color-aqua);
+    color: #f7fffe;
+  }
+
+  .btn-primary:hover {
+    background: #247873;
+  }
+
+  .btn-on-dark {
+    background: #f4ebe0;
+    color: var(--color-deep);
+  }
+
+  .btn-on-dark:hover {
+    background: #fff;
+  }
+
+  .btn-ghost {
+    border: 1px solid color-mix(in srgb, white 38%, transparent);
+    color: #f4ebe0;
+    background: color-mix(in srgb, white 6%, transparent);
+  }
+
+  .btn-ghost:hover {
+    background: color-mix(in srgb, white 12%, transparent);
+  }
+
+  .btn-outline {
+    border: 1px solid var(--color-line);
+    color: var(--color-deep);
+    background: var(--color-paper);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--color-teal);
+    color: var(--color-teal);
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label,
+.legend {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-deep);
+}
+
+.field input,
+.field select,
+.field textarea {
+  min-height: 2.85rem;
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 0.7rem;
+  background: var(--color-paper);
+  padding: 0.65rem 0.85rem;
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.field textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--color-aqua) 55%, white);
+  outline-offset: 1px;
+  border-color: var(--color-aqua);
+}
+
+.hero-water {
+  background:
+    radial-gradient(1200px 520px at 80% -10%, rgba(42, 138, 134, 0.35), transparent 55%),
+    radial-gradient(900px 480px at 0% 110%, rgba(184, 149, 106, 0.16), transparent 50%),
+    linear-gradient(165deg, #08262c 0%, #0c3d45 48%, #134e52 100%);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.11;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.card {
+  background: var(--color-paper);
+  border: 1px solid color-mix(in srgb, var(--color-line) 80%, white);
+  border-radius: 1.15rem;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-ink) 4%, transparent);
+}
+
+.prose-site p {
+  max-width: 40rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
