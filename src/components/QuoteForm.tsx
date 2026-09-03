@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { noticeOptions, site } from "@/lib/site";
+import { interestOptions, noticeOptions, site } from "@/lib/site";
 
 export function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -79,6 +79,21 @@ export function QuoteForm() {
           <input type="radio" name="source" value="city" />
           City water
         </label>
+      </fieldset>
+
+      <fieldset className="grid gap-3">
+        <legend className="legend">What you want quoted</legend>
+        {interestOptions.map((option) => (
+          <label key={option.id} className="flex items-center gap-3 text-sm">
+            <input
+              type="radio"
+              name="interest"
+              value={option.id}
+              defaultChecked={option.id === "both"}
+            />
+            {option.label}
+          </label>
+        ))}
       </fieldset>
 
       <fieldset className="grid gap-3">

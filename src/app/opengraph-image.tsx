@@ -47,7 +47,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            Whole-home filtration for Treasure Valley wells.
+            Whole-home treatment and drinking-water RO for Treasure Valley wells.
           </div>
           <div style={{ fontSize: 28, color: "#d8e8e6" }}>
             Meridian, Idaho · 208-573-0859

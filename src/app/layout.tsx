@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     "Canyon County",
     "water softener",
     "iron filter",
+    "reverse osmosis",
+    "RO drinking water",
   ],
   alternates: {
     canonical: "/",

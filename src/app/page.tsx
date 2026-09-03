@@ -13,12 +13,14 @@ export default function HomePage() {
               {site.city}, {site.state} · {site.areaShort} wells
             </p>
             <h1 className="font-display mt-4 max-w-xl text-4xl leading-[1.12] text-balance sm:text-5xl lg:text-6xl">
-              Whole-home water that tastes like it should.
+              Whole-home treatment, plus RO for drinking water.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-sand/82 sm:text-lg">
               Oasis Water Filtration treats sediment, hardness, iron, sulfur,
-              and taste or odor for {site.audience} in {site.areaLong}. UV is a
-              typical part of a well-water package. Free water test and quote.
+              and taste or odor for {site.audience} in {site.areaLong}. We also
+              offer point-source reverse osmosis for drinking and cooking water
+              at a dedicated faucet. UV is a typical part of a well-water
+              package. Free water test and quote.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a className="btn btn-on-dark" href={site.phoneHref}>
@@ -36,6 +38,7 @@ export default function HomePage() {
             </p>
             <ul className="mt-4 space-y-3 text-sand/90">
               <li>Whole-home filtration and treatment</li>
+              <li>Point-source RO for drinking water</li>
               <li>Free water tests and quotes</li>
               <li>Ada and Canyon County private wells</li>
               <li>
@@ -50,6 +53,51 @@ export default function HomePage() {
               </li>
             </ul>
           </aside>
+        </div>
+      </section>
+
+      <section className="bg-foam">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal">
+            What we offer
+          </p>
+          <h2 className="font-display mt-2 text-3xl text-deep sm:text-4xl">
+            Two kinds of treatment
+          </h2>
+          <ul className="mt-8 grid gap-4 md:grid-cols-2">
+            <li className="card p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-teal">
+                Whole house
+              </p>
+              <h3 className="font-display mt-3 text-2xl text-deep">
+                Filtration and treatment at every tap
+              </h3>
+              <p className="mt-3 leading-relaxed text-muted">
+                Sediment, hardness and softening, iron, sulfur, taste and odor,
+                and UV as a typical well-water package — treated where well water
+                enters the home.
+              </p>
+            </li>
+            <li className="card p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-teal">
+                Point source
+              </p>
+              <h3 className="font-display mt-3 text-2xl text-deep">
+                Reverse osmosis for drinking water
+              </h3>
+              <p className="mt-3 leading-relaxed text-muted">
+                A point-of-use RO system polishes water at one tap for drinking
+                and cooking, typically under the sink with a dedicated faucet. It
+                works alongside whole-home treatment, not in place of it.
+              </p>
+              <Link
+                className="mt-4 inline-block text-sm font-semibold text-teal underline underline-offset-4"
+                href="/filtration#reverse-osmosis"
+              >
+                How drinking-water RO fits
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
 

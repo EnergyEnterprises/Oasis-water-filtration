@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 6rem;
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-ink);
