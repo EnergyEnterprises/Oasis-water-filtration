@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Service area",
   description:
-    "Oasis Water Filtration serves Treasure Valley homes on private wells in Ada and Canyon County, Idaho. Shop address: 3937 East Ustick Road, Meridian.",
+    "Oasis Water Filtration serves Treasure Valley homes on private wells in Ada and Canyon County, Idaho. Shop address: 517 E. 3rd St., Meridian, ID 83642.",
   alternates: { canonical: "/service-area" },
 };
 

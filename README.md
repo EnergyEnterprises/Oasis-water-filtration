@@ -41,7 +41,7 @@ It does not include login, a CMS, reviews, ratings, licenses, years in business,
 ## Business facts used in copy
 
 - Brand: Oasis Water Filtration
-- Address: 3937 East Ustick Road, Meridian, Idaho
+- Address: 517 E. 3rd St., Meridian, ID 83642
 - Phone: 208-573-0859
 - Related: Oasis Well Pump, a division of Energy Enterprises LLC
 - Offer: whole-home water filtration and treatment, plus point-source reverse osmosis for drinking water; free water tests and quotes

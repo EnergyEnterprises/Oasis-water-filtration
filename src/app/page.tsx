@@ -206,7 +206,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Map the Ustick address
+                {site.mapLabel}
               </a>
             </div>
           </div>

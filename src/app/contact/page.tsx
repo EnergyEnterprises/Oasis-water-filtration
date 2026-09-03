@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact and request a quote",
   description:
-    "Request a free water test and quote for whole-home treatment or point-source RO drinking water. Oasis Water Filtration, 3937 East Ustick Road, Meridian, Idaho. Call 208-573-0859.",
+    "Request a free water test and quote for whole-home treatment or point-source RO drinking water. Oasis Water Filtration, 517 E. 3rd St., Meridian, ID 83642. Call 208-573-0859.",
   alternates: { canonical: "/contact" },
 };
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noreferrer"
             >
-              Map 3937 East Ustick Road
+              {site.mapLabel}
             </a>
           </div>
 
