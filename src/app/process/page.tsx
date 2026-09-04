@@ -15,7 +15,7 @@ export default function ProcessPage() {
   return (
     <>
       <PageHero
-        eyebrow="Process"
+        eyebrow="How it works"
         title="Test, quote, install, then service"
         lede="A free water test comes first. The quote follows what is in the well. Install can be whole-home treatment, a point-source RO drinking-water system, or both. Service keeps the system working."
       />
@@ -38,7 +38,7 @@ export default function ProcessPage() {
           </a>{" "}
           or{" "}
           <Link className="font-semibold text-teal underline" href="/contact">
-            request a quote
+            request a free water test
           </Link>
           .
         </p>

@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { site } from "@/lib/site";
+import { CtaPair } from "@/components/CtaPair";
 
 type CtaBandProps = {
   title?: string;
@@ -7,7 +6,7 @@ type CtaBandProps = {
 };
 
 export function CtaBand({
-  title = "Request a free water test and quote",
+  title = "Request a free water test",
   body = "Tell us what you notice at the tap. We will test the well and quote whole-home treatment, point-source RO for drinking water, or both.",
 }: CtaBandProps) {
   return (
@@ -17,14 +16,7 @@ export function CtaBand({
           <h2 className="font-display text-3xl text-deep sm:text-4xl">{title}</h2>
           <p className="mt-3 text-muted">{body}</p>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <a className="btn btn-primary" href={site.phoneHref}>
-            Call {site.phoneDisplay}
-          </a>
-          <Link className="btn btn-outline" href="/contact">
-            Request a quote
-          </Link>
-        </div>
+        <CtaPair />
       </div>
     </section>
   );

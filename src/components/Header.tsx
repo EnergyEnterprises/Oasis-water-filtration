@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { Logo } from "@/components/Logo";
-import { nav, site } from "@/lib/site";
+import { cta, nav, site } from "@/lib/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -29,14 +29,14 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-3 py-2 text-sm font-semibold ${
+                className={`rounded-full px-2.5 py-2 text-sm font-semibold ${
                   active
                     ? "bg-foam text-teal"
                     : "text-ink/80 hover:bg-sand hover:text-deep"
@@ -49,15 +49,15 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a className="btn btn-primary px-4 lg:hidden" href={site.phoneHref}>
-            Call
-          </a>
-          <a className="btn btn-primary hidden lg:inline-flex" href={site.phoneHref}>
-            {site.phoneDisplay}
-          </a>
-          <Link className="btn btn-outline hidden lg:inline-flex" href="/contact">
-            Request a quote
+          <Link className="btn btn-primary px-4 lg:hidden" href={cta.primaryHref}>
+            {cta.primaryShort}
           </Link>
+          <Link className="btn btn-primary hidden lg:inline-flex" href={cta.primaryHref}>
+            {cta.primaryShort}
+          </Link>
+          <a className="btn btn-outline hidden lg:inline-flex" href={site.phoneHref}>
+            Call {site.phoneDisplay}
+          </a>
           <button
             type="button"
             className="inline-flex size-11 items-center justify-center rounded-full border border-line bg-paper text-deep lg:hidden"
@@ -104,12 +104,12 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a className="btn btn-primary mt-2" href={site.phoneHref}>
+            <Link className="btn btn-primary mt-2" href={cta.primaryHref}>
+              {cta.primary}
+            </Link>
+            <a className="btn btn-outline" href={site.phoneHref}>
               Call {site.phoneDisplay}
             </a>
-            <Link className="btn btn-outline" href="/contact">
-              Request a quote
-            </Link>
           </nav>
         </div>
       ) : null}
