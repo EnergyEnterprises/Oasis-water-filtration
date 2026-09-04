@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { interestOptions, noticeOptions, site } from "@/lib/site";
+import { cta, interestOptions, noticeOptions, site } from "@/lib/site";
 
 export function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,18 +14,20 @@ export function QuoteForm() {
   if (submitted) {
     return (
       <div className="card p-6 sm:p-8" role="status">
-        <h2 className="font-display text-2xl text-deep">Request received in this preview</h2>
+        <h2 className="font-display text-2xl text-deep">Thanks — please call to confirm</h2>
         <p className="mt-3 leading-relaxed text-muted">
-          This form does not send email yet. To request a water test or quote,
-          call{" "}
+          The surest way to get this request to us is to call{" "}
           <a className="font-semibold text-teal underline" href={site.phoneHref}>
             {site.phoneDisplay}
           </a>
           .
         </p>
+        <a className="btn btn-primary mt-6" href={site.phoneHref}>
+          Call {site.phoneDisplay}
+        </a>
         <button
           type="button"
-          className="btn btn-outline mt-6"
+          className="btn btn-outline mt-3"
           onClick={() => setSubmitted(false)}
         >
           Edit the form
@@ -114,12 +116,15 @@ export function QuoteForm() {
       </div>
 
       <p className="text-sm text-muted">
-        Submitting this preview does not email anyone. For a real request, call{" "}
-        {site.phoneDisplay}.
+        A phone call is the surest way to request a test. Call{" "}
+        <a className="font-semibold text-teal underline" href={site.phoneHref}>
+          {site.phoneDisplay}
+        </a>{" "}
+        anytime.
       </p>
 
       <button type="submit" className="btn btn-primary w-full sm:w-auto">
-        Request a quote
+        {cta.primary}
       </button>
     </form>
   );

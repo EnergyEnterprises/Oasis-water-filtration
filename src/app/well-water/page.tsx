@@ -37,7 +37,7 @@ export default function WellWaterPage() {
   return (
     <>
       <PageHero
-        eyebrow="Well water"
+        eyebrow="Why wells"
         title="Why filtration matters on a private well"
         lede={`Homes on private wells in ${site.areaLong} do not receive city-treated water. Whole-home filtration is how sediment, hardness, iron, sulfur, and taste or odor are handled at every tap. Point-source RO polishes drinking water at a dedicated faucet.`}
       />

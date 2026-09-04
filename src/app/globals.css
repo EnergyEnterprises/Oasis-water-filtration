@@ -192,6 +192,165 @@ body {
   box-shadow: 0 1px 0 color-mix(in srgb, var(--color-ink) 4%, transparent);
 }
 
+.path-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.path-card::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.55;
+}
+
+.path-card--whole {
+  background:
+    radial-gradient(280px 180px at 100% 0%, color-mix(in srgb, var(--color-aqua) 16%, white), transparent 62%),
+    var(--color-paper);
+}
+
+.path-card--whole::before {
+  width: 9rem;
+  height: 9rem;
+  right: -1.5rem;
+  bottom: -2rem;
+  background: color-mix(in srgb, var(--color-aqua) 12%, transparent);
+}
+
+.path-card--ro {
+  background:
+    radial-gradient(280px 180px at 0% 0%, color-mix(in srgb, var(--color-clay) 22%, white), transparent 62%),
+    var(--color-sand);
+  border-color: color-mix(in srgb, var(--color-clay) 28%, var(--color-line));
+}
+
+.path-card--ro::before {
+  width: 4.5rem;
+  height: 4.5rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  background: color-mix(in srgb, var(--color-clay) 28%, transparent);
+}
+
+.trust-strip {
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.trust-strip-list {
+  display: grid;
+  gap: 0.85rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .trust-strip-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.trust-strip-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--color-deep);
+  font-weight: 600;
+}
+
+.trust-strip-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--color-aqua);
+}
+
+.symptom-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.symptom-card:hover {
+  border-color: var(--color-teal);
+}
+
+.symptom-card:active {
+  transform: translateY(1px);
+}
+
+.faq-item {
+  background: var(--color-paper);
+  border: 1px solid color-mix(in srgb, var(--color-line) 80%, white);
+  border-radius: 1.15rem;
+  padding: 0.15rem 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--color-deep);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-foam);
+  color: var(--color-teal);
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  padding: 0 1.15rem 1.15rem;
+  margin: 0;
+  max-width: 40rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.phone-emphasis {
+  background:
+    radial-gradient(420px 180px at 100% 0%, color-mix(in srgb, var(--color-aqua) 18%, white), transparent 60%),
+    var(--color-foam);
+}
+
 .prose-site p {
   max-width: 40rem;
 }
@@ -202,6 +361,10 @@ body {
   }
 
   .btn {
+    transition: none;
+  }
+
+  .symptom-card {
     transition: none;
   }
 }

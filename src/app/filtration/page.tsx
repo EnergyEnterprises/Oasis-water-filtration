@@ -16,7 +16,7 @@ export default function FiltrationPage() {
   return (
     <>
       <PageHero
-        eyebrow="Filtration"
+        eyebrow="What we treat"
         title="What we treat in well water"
         lede="Oasis Water Filtration is whole-home water filtration and treatment — sediment, hardness and softening, iron, sulfur, taste and odor, and UV as a typical well-water package — plus point-source reverse osmosis for drinking water. Free water tests and quotes."
       />

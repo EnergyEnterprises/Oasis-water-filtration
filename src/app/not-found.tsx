@@ -11,15 +11,15 @@ export default function NotFound() {
         That page is not on this site.
       </h1>
       <p className="mx-auto mt-4 max-w-md text-muted">
-        Use the menu for filtration, well water, process, service area, or
-        contact — or call {site.phoneDisplay}.
+        Use the menu for what we treat, why wells, how it works, service area,
+        or a free test — or call {site.phoneDisplay}.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <Link className="btn btn-primary" href="/">
-          Back to home
+        <Link className="btn btn-primary" href="/contact">
+          Request a free water test
         </Link>
-        <Link className="btn btn-outline" href="/contact">
-          Request a quote
+        <Link className="btn btn-outline" href="/">
+          Back to home
         </Link>
       </div>
     </div>

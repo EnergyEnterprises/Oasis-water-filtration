@@ -22,12 +22,18 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "/filtration", label: "Filtration" },
-  { href: "/well-water", label: "Well water" },
-  { href: "/process", label: "Process" },
+  { href: "/filtration", label: "What we treat" },
+  { href: "/well-water", label: "Why wells" },
+  { href: "/process", label: "How it works" },
   { href: "/service-area", label: "Service area" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Free test" },
 ] as const;
+
+export const cta = {
+  primary: "Request a free water test",
+  primaryShort: "Free water test",
+  primaryHref: "/contact",
+} as const;
 
 export const roOffer = {
   slug: "reverse-osmosis",
@@ -134,3 +140,80 @@ export const interestOptions = [
 
 export const defaultDescription =
   "Whole-home water filtration and treatment, plus point-source reverse osmosis for drinking water, for Treasure Valley homes on private wells. Free water test and quote in Ada and Canyon County, Idaho.";
+
+export const symptoms = [
+  {
+    slug: "stain",
+    title: "Orange or rust stains",
+    body: "Stains in sinks, tubs, toilets, and laundry are a common iron issue on private wells.",
+    href: "/filtration#iron",
+  },
+  {
+    slug: "smell",
+    title: "Rotten-egg odor",
+    body: "Sulfur smell at the tap or when hot water runs is treated at the whole-home level.",
+    href: "/filtration#sulfur",
+  },
+  {
+    slug: "hardness",
+    title: "Scale, spots, stiff laundry",
+    body: "Mineral hardness leaves scale on fixtures and spots on glass. Softening is the usual whole-home answer.",
+    href: "/filtration#hardness",
+  },
+  {
+    slug: "sediment",
+    title: "Cloudy water or grit",
+    body: "Sand, grit, and rust particles cloud water, wear fixtures, and clog screens.",
+    href: "/filtration#sediment",
+  },
+  {
+    slug: "taste-odor",
+    title: "Off taste or smell",
+    body: "Water that tastes metallic or smells off is often treated once we know what is in the well.",
+    href: "/filtration#taste-odor",
+  },
+  {
+    slug: "drinking",
+    title: "Water you do not want to drink",
+    body: "Point-source reverse osmosis polishes drinking and cooking water at a dedicated faucet.",
+    href: "/contact",
+  },
+] as const;
+
+export const trustItems = [
+  "Free water tests and quotes",
+  "Treasure Valley / Ada and Canyon County private wells",
+  "Whole-home treatment plus point-source RO",
+  `Sister to ${site.sister}`,
+] as const;
+
+export const faqs = [
+  {
+    q: "What do you treat?",
+    a: "Whole-home well treatment for sediment, hardness and softening, iron, sulfur, taste and odor, and UV as a typical well-water package — plus point-source reverse osmosis for drinking and cooking water at a dedicated faucet.",
+  },
+  {
+    q: "Do you serve my well?",
+    a: `We work with ${site.audience} in ${site.areaLong}.`,
+  },
+  {
+    q: "Is a water test free?",
+    a: "Yes. Water tests and quotes are free.",
+  },
+  {
+    q: "What is the difference between whole-home treatment and reverse osmosis?",
+    a: "Whole-home treatment is installed where well water enters the house so every tap is treated. Point-source RO is a point-of-use system at one tap for drinking and cooking, typically under the sink with a dedicated faucet. It sits alongside whole-home treatment; it does not replace sediment, softening, iron, sulfur, or UV.",
+  },
+  {
+    q: "How does a job start?",
+    a: "Request a free water test. Tell us what you notice — stain, smell, hardness, sediment, or water you do not want to drink. The quote follows the test: whole-home treatment, point-source RO, or both. Install and periodic service come after.",
+  },
+  {
+    q: "Are you Oasis Well Pump?",
+    a: `${site.name} is the filtration and treatment offer. Sister services — well pump, plumbing, electrical, and backup generators — are handled by ${site.sister}, a division of ${site.parent}.`,
+  },
+  {
+    q: "Where are you located?",
+    a: `${site.addressLine}. Call ${site.phoneDisplay}.`,
+  },
+] as const;
