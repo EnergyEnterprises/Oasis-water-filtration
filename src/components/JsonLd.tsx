@@ -12,6 +12,7 @@ export function JsonLd() {
       streetAddress: site.street,
       addressLocality: site.city,
       addressRegion: site.stateAbbr,
+      postalCode: site.postalCode,
       addressCountry: "US",
     },
     areaServed: ["Treasure Valley", "Ada County", "Canyon County", "Meridian"],
